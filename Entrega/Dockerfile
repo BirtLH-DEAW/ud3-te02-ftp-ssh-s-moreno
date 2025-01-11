@@ -9,7 +9,7 @@ LABEL \
 
 # Actualizamos la lista de paquetes e instalamos paquetes necesarios
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y nano apache2 proftpd proftpd-mod-crypto openssl ssh --yes git --yes && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y nano apache2 proftpd proftpd-mod-crypto openssl openssh-server openssh-client git --yes && \
     rm -rf /var/lib/apt/lists/* 
 
 # Creamos directorios para los sitios web
